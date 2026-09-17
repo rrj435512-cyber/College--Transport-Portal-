@@ -1,0 +1,283 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #eef7ff, #ffffff);
+    color: #123b63;
+}
+
+
+/* HEADER */
+
+header {
+    background: #075985;
+    color: white;
+    min-height: 105px;
+    padding: 18px 4%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 55px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+header p {
+    margin: 5px 0;
+    font-size: 17px;
+}
+
+nav {
+    margin-left: auto;
+    display: flex;
+    gap: 30px;
+    font-size: 17px;
+}
+
+
+/* SEARCH */
+
+.search-section {
+    text-align: center;
+    padding: 45px 15px 20px;
+}
+
+.search-section h2 {
+    font-size: 38px;
+    margin-bottom: 8px;
+}
+
+.search-section > p {
+    font-size: 18px;
+}
+
+
+.search-box {
+    max-width: 820px;
+    margin: 30px auto;
+    background: white;
+    border-radius: 18px;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+    border: 1px solid #d5e5f2;
+}
+
+.search-box span {
+    font-size: 25px;
+}
+
+.search-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 20px;
+    font-size: 20px;
+}
+
+
+/* SEARCH RESULT */
+
+#searchResult {
+    max-width: 850px;
+    margin: 20px auto;
+}
+
+
+/* MOVING BUS */
+
+.bus-animation {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+    margin: 10px 0;
+    background: linear-gradient(to bottom, transparent 65%, #dce8ef 66%);
+    border-radius: 20px;
+}
+
+
+/* BUS */
+
+.bus {
+    position: absolute;
+    left: 50%;
+    bottom: 25px;
+    transform: translateX(-50%);
+    font-size: 110px;
+    animation: busMove 2.5s ease-in-out infinite;
+}
+
+
+/* WHEEL ROTATION */
+
+.wheel {
+    display: inline-block;
+    animation: wheelSpin 0.5s linear infinite;
+}
+
+
+/* SMOKE */
+
+.smoke {
+    position: absolute;
+    left: 27%;
+    bottom: 50px;
+    font-size: 35px;
+    animation: smokeMove 2s ease-out infinite;
+    opacity: 0.7;
+}
+
+
+/* BUS MOVEMENT */
+
+@keyframes busMove {
+
+    0% {
+        transform: translateX(-55%);
+    }
+
+    50% {
+        transform: translateX(-45%);
+    }
+
+    100% {
+        transform: translateX(-55%);
+    }
+
+}
+
+
+/* WHEEL */
+
+@keyframes wheelSpin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* SMOKE */
+
+@keyframes smokeMove {
+
+    0% {
+        transform: translateX(0) scale(0.7);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateX(-100px) scale(1.5);
+        opacity: 0;
+    }
+
+}
+
+
+/* DETAILS CARD */
+
+.bus-result {
+    background: white;
+    border-radius: 22px;
+    padding: 28px;
+    margin-top: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    text-align: left;
+}
+
+.bus-result h3 {
+    text-align: center;
+    font-size: 27px;
+    color: #075985;
+}
+
+.bus-result p {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.bus-icon {
+    text-align: center;
+    font-size: 50px;
+}
+
+
+/* ROUTES */
+
+.all-routes {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.all-routes h2 {
+    text-align: center;
+}
+
+.route-card {
+    background: white;
+    padding: 18px;
+    margin: 12px 0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #075985;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 40px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    header {
+        flex-wrap: wrap;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center;
+        gap: 12px;
+        font-size: 13px;
+    }
+
+    .search-section h2 {
+        font-size: 30px;
+    }
+
+    .bus {
+        font-size: 80px;
+    }
+
+    .smoke {
+        left: 20%;
+    }
+
+}

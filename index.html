@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>College Transport Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🚌</div>
+    <div>
+        <h1>College Transport Portal</h1>
+        <p>Your Journey • Our Priority</p>
+    </div>
+
+    <nav>
+        <span>🏠 Home</span>
+        <span>📍 Routes</span>
+        <span>ℹ️ About</span>
+    </nav>
+</header>
+
+
+<section class="search-section">
+
+    <h2>Search Your Bus</h2>
+
+    <p>Enter Bus Name or Town to get route, pickup point and timing details.</p>
+
+    <div class="search-box">
+
+        <span>🔍</span>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Enter Bus Name or Town..."
+            onkeyup="searchTransport()"
+        >
+
+    </div>
+
+    <div id="searchResult"></div>
+
+</section>
+
+
+<section class="all-routes">
+
+    <h2>Available Bus Routes</h2>
+
+    <div class="route-card">
+        <b>A18</b> — Mayiladuthurai → Manalmedu — 9.00 AM
+    </div>
+
+    <div class="route-card">
+        <b>SRT</b> — Kumbakonam → Manalmedu — 8.45 AM
+    </div>
+
+    <div class="route-card">
+        <b>457</b> — Chidambaram → Manalmedu — 7.15 AM
+    </div>
+
+    <div class="route-card">
+        <b>440</b> — Sirkali → Manalmedu — 7.40 AM
+    </div>
+
+    <div class="route-card">
+        <b>MRS</b> — Needur → Manalmedu — 9.30 AM
+    </div>
+
+</section>
+
+
+<footer>
+    <p>© 2026 College Transport Portal</p>
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
